@@ -50,4 +50,28 @@ $(document).ready(function() {
 		};
 	});
 
+	function scrollImg() {
+		var winHeight = $(window).height(),
+			winTop = $(window).scrollTop();
+
+		$('.js-gif').each(function() {
+
+			var imgTop = $(this).offset().top,
+				imgHeight = $(this).height();
+
+			if (winTop + winHeight >= imgTop + imgHeight) {
+				if (!$(this).hasClass('is-active')) {
+					$(this).addClass('is-active');
+					$(this).find('img').attr('src', $('.js-gif img').data('src'));
+				}
+			};
+
+		});
+
+	}
+
+	$(window).scroll(function() {
+		scrollImg();		
+	});
+
 });

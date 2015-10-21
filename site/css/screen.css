@@ -117,7 +117,7 @@ a { text-decoration: none; }
 
 .info { *zoom: 1; max-width: 775px; margin: 0 auto; padding: 40px 0 0; }
 .info:after { content: " "; display: table; clear: both; }
-.info__img { float: left; font-size: 0; }
+.info__img { float: left; font-size: 0; min-height: 290px; }
 .info__block { float: right; padding: 15px 0 0; }
 .info__title { background-image: url("../img/icons.png"); width: 418px; height: 95px; background-position: -863px -323px; color: white; font-family: "OpenSans Semibold", Arial, sans-serif; text-transform: uppercase; line-height: 1; font-size: 20px; padding: 20px 70px 20px 60px; margin-bottom: 20px; }
 .info__title b { font-family: "OpenSans Bold", Arial, sans-serif; text-transform: none; font-size: 22px; }
