@@ -37,6 +37,17 @@ $(document).ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
+	
+	$('.js-btn-sound').on('click', function() {
 
-	console.log($('body').html());
+		$(this).toggleClass('is-active');
+
+		if ($(this).hasClass('is-active')) {
+			$("audio").prop('muted', false);
+		}
+		else {
+			$("audio").prop('muted', true);
+		};
+	});
+
 });

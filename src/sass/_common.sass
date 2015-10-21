@@ -47,11 +47,53 @@
 // p
 // 	+jpg(bla)
 
++font("PFSquereSansPro Regular", pfsquaresanspro-regular)
++font("PFSquereSansPro Medium", pfsquaresanspro-medium)
++font("PFSquereSansPro Bold", pfsquaresanspro-bold)
++font("OpenSans Semibold", opensans-semibold)
++font("OpenSans Bold", opensans-bold)
+
+=reg
+	font-family: "PFSquereSansPro Regular", Arial, sans-serif
+=med
+	font-family: "PFSquereSansPro Medium", Arial, sans-serif
+=bold
+	font-family: "PFSquereSansPro Bold", Arial, sans-serif
+=opsemi
+	font-family: "OpenSans Semibold", Arial, sans-serif
+=opbold
+	font-family: "OpenSans Bold", Arial, sans-serif
+
+//reset
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	+reg
+	font-size: 18px
 	line-height: 1.4
+	background-color: #001c32
 
+h1, h2, h3, h4, h5, h6, b, strong, em, i, td, th
+	font-style: normal
+	font-weight: normal
 
-// common blocks
+h4
+	+med
+	color: white
+	font-size: 24px
+	line-height: 1
+	text-align: center
+	text-transform: uppercase
+	b
+		color: #db721d
+		font-size: 32px
+		+bold
+		text-transform: none
+
+h5
+	font-size: 24px
+	color: white
+	+med
+	line-height: 1.2
+
+a
+	text-decoration: none

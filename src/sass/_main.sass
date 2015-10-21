@@ -1,9 +1,335 @@
-// Normally mainpage styles
-// body
-// 	+s(coderiver)
-div
-	+r(1024)
+.out
+	min-width: 960px
+	overflow: hidden
+
+.btn-sound
+	// +svg(no_sound, 34, 28)
+	background: none
+	position: absolute
+	top: 20px
+	right: 20px
+	z-index: 500 
+	&.is-active
+		.no-sound
+			display: none
+
+.video
+	position: relative
+	video
+		width: 100%
+	audio
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+	
+.header
+	background: #000 
+	&__inner
+		max-width: 960px
+		margin: 0 auto
+		+clr
+		padding: 10px 0
+	&__phone
+		float: right
+		font-size: 18px
+		+reg
+		color: #9fafb8 
+		padding: 6px 0 
+.logo
+	float: left
+	img
+		max-width: 100%
+
+.nav
+	background: #1d2021
+	border-bottom: 2px solid #74b42c 
+	border-top: #323537 1px solid
+	&__list
+		font-size: 0
+		text-align: center
+		max-width: 960px
+		margin: 0 auto 
+		border-left: #323537 1px solid
+		li
+			width: 16.66%
+			display: inline-block
+			a
+				display: block
+				color: #9fafb8
+				font-size: 16px
+				border-right: #323537 1px solid
+				cursor: pointer
+				padding: 19px 10px 
+				transition: background 0.25s
+				&:hover
+					background: #000 
+
+.witch-bg
+	+s(witch_on_broomstick)
+	position: absolute
+	top: 440px
+	left: 100%
+	margin-left: -375px
+
+.bat
+	&-down
+		position: absolute
+		+s(bat_down)
+		&.is-one
+			top: -75px
+			right: -4px
+		&.is-two
+			right: -146px
+			top: 1510px
+		&.is-three
+			top: 3700px
+			right: -310px
+	&-in-middle
+		position: absolute
+		+s(bat_in_middle)
+		&.is-one
+			top: 275px
+			right: -352px
+		&.is-two
+			right: -385px
+			top: 2090px
+		&.is-three
+			top: 4500px
+			right: -210px
+	&-up
+		position: absolute
+		+s(bat_up)
+		&.is-one
+			left: -295px
+			top: 510px
+		&.is-two
+			left: -295px
+			top: 2470px
+		&.is-three
+			left: -310px
+			top: 4790px
+
+.inner
+	width: 960px
+	margin: 0 auto
+	position: relative
+					
+.form
+	margin-bottom: 35px
+	&__title
+		color: white
+		font-size: 24px
+		line-height: 1
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 55px
+	&__block
+		+s(registr_bg)
+		margin: 0 auto 
+		padding: 9px 72px 22px 79px 
+		+clr
+	&__list
+		float: left
+		li
+			padding: 2px 0 
+		a
+			display: inline-block
+			vertical-align: top
+			&.is-mail
+				+s(registr_form_mail)
+			&.is-fb
+				+s(registr_form_fb)
+			&.is-gp
+				+s(registr_form_g)
+	&__label
+		color: black
+		font-size: 20px
+		+med
+		line-height: 1
+		padding: 35px 10px
+		float: left 
+	&__field
+		padding: 0 145px 0 0
+		margin: 12px 0 17px 
+		overflow: hidden
+		position: relative
+		box-shadow: 0 2px 2px rgba(0, 42, 65, 0.35)
+		border-radius: 5px
+		.input
+			border-radius: 5px 0 0 5px
+		.btn
+			border-radius: 0px 5px 5px 0px
+			position: absolute
+			top: 0
+			right: 0
+
+.input
+	width: 100%
+	height: 60px
+	background-color: white
+	background-image: linear-gradient(to top, #e2e2df 0%, white 100%)
+	border-radius: 5px
+	padding: 0 25px 
+	color: #001c32
+	font-size: 20px
+
+.btn
+	background-color: #00526f
+	background-image: linear-gradient(to top, #002a41 0%, #0088af 69%, #0088af 100%)
+	font-size: 20px
+	line-height: 1
+	color: #fff
+	padding: 20px 15px
+	border-radius: 5px
+	&:active
+		background-image: linear-gradient(to top, #0088af 0%, #002a41 69%, #002a41 100%)
+	&_mod
+		border-radius: 2px
+		padding: 18px 23px 
+		font-size: 24px
+
+.info
+	+clr
+	max-width: 775px
+	margin: 0 auto 
+	padding: 40px 0 0 
+	&__img
+		float: left
+		font-size: 0
+		img
+	&__block
+		float: right
+		padding: 15px 0 0 
+	&__title
+		+s(orange_bg_mk)
+		color: white
+		+opsemi
+		text-transform: uppercase
+		line-height: 1
+		font-size: 20px
+		padding: 20px 70px 20px 60px 
+		margin-bottom: 20px
+		b
+			+opbold
+			text-transform: none
+			font-size: 22px
+	&__list
+		color: white
+		font-size: 24px
+		line-height: 1
+		li
+			position: relative
+			padding: 14px 0 14px 65px
+			i
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -18px
+				&.icon-delivery
+					+s(delivery)
+				&.icon-cost
+					+s(cost)
+				&.icon-return
+					+s(return)
+	&__btn
+		padding: 50px 0 70px
+		text-align: center 
+		clear: both
+
+.link-dotted
+	+med
+	color: #d9711c
+	font-size: 14px
+	line-height: 20px
+	border-bottom: 1px dotted #d9711c
+	display: inline-block
+	vertical-align: top
+	
+.help
+	padding: 0 55px 
+	width: 700px
+	text-align: center
+	color: white
+	&__title
+		+s(orange_bg)
+		+med
+		text-transform: uppercase
+		line-height: 1
+		font-size: 20px
+		padding: 20px 70px 20px 60px 
+		margin: 0 10px 
+		b
+			+opbold
+			text-transform: none
+			font-size: 22px
+	small
+		font-size: 14px
+		margin-bottom: 30px
 		display: block
-p
-	+r(1024)
-		background: red
+	h5
+		margin-bottom: 35px
+	&__subtitle
+		color: #ffa200
+		font-size: 24px
+		+med
+		text-transform: uppercase
+		line-height: 1.2
+		margin-bottom: 15px
+	&__list
+		li
+			padding: 11px 0 11px 45px
+			position: relative
+			font-size: 18px
+			line-height: 1.2
+			text-align: left
+			&:before
+				content: "" 
+				position: absolute
+				top: 10px
+				left: 0
+				+s(witch_marker)
+
+.brands
+	text-align: center
+	font-size: 0
+	img
+		max-width: 100%
+
+.witch
+	padding: 40px 0 105px
+	color: #fff  
+	background: url(../img/witches.png) no-repeat 50% 70%
+	&__title
+		+s(orange_bg1)
+		+med
+		text-transform: uppercase
+		line-height: 1
+		font-size: 20px
+		padding: 20px 60px 20px 60px 
+		margin: 0 auto 35px
+		text-align: center
+		color: #fff 
+	p
+		font-size: 18px
+		line-height: 1.2
+		margin-bottom: 10px
+		
+.social
+	text-align: center
+	font-size: 0
+	padding: 20px 0 520px 
+	li
+		display: inline-block
+		padding: 0 6px 
+		a
+			display: inline-block
+			vertical-align: top
+			&.is-vk
+				+s(vk)
+			&.is-insta
+				+s(instagram)
+			&.is-fb
+				+s(facebook)
+			

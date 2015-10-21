@@ -1,6 +1,24 @@
 $icons: (0:0)
-$icons: map-merge($icons,(codedby: (X: 0px, Y:-9px, W: 47px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(bat_down: (X: -1285px, Y:-323px, W: 86px, H: 76px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(bat_in_middle: (X: -1451px, Y:-125px, W: 120px, H: 68px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(bat_up: (X: -1385px, Y:-224px, W: 133px, H: 54px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -1504px, Y:-197px, W: 47px, H: 5px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -1451px, Y:-197px, W: 49px, H: 5px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cost: (X: -1425px, Y:-282px, W: 36px, H: 36px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(delivery: (X: -1385px, Y:-282px, W: 36px, H: 36px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(facebook: (X: -1375px, Y:-323px, W: 52px, H: 52px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(instagram: (X: -1522px, Y:-224px, W: 52px, H: 52px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(orange_bg: (X: -863px, Y:-125px, W: 584px, H: 95px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(orange_bg1: (X: -863px, Y:-224px, W: 518px, H: 95px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(orange_bg_mk: (X: -863px, Y:-323px, W: 418px, H: 95px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(registr_bg: (X: -863px, Y:0px, W: 732px, H: 121px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(registr_form_fb: (X: -1569px, Y:-282px, W: 26px, H: 26px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(registr_form_g: (X: -1487px, Y:-323px, W: 26px, H: 26px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(registr_form_mail: (X: -1539px, Y:-282px, W: 26px, H: 26px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(return: (X: -1465px, Y:-282px, W: 36px, H: 36px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(vk: (X: -1431px, Y:-323px, W: 52px, H: 52px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(witch_marker: (X: -1505px, Y:-282px, W: 30px, H: 26px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(witch_on_broomstick: (X: 0px, Y:0px, W: 859px, H: 849px, TW: 1595px, TH: 849px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -14,19 +32,144 @@ $icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, 
 	height: icon-attr($iconName, H)
 	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
 
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
 @mixin s($i)
 	+sprite($i)
 
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-bat_down
+//	width: 86px
+//	height: 76px
+//	background-image: url('../img/icons.png')
+//	background-position: -1285px -323px
+//
+//.icon-bat_in_middle
+//	width: 120px
+//	height: 68px
+//	background-image: url('../img/icons.png')
+//	background-position: -1451px -125px
+//
+//.icon-bat_up
+//	width: 133px
+//	height: 54px
+//	background-image: url('../img/icons.png')
+//	background-position: -1385px -224px
 //
 //.icon-codedby
 //	width: 47px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: 0px -9px
+//	background-position: -1504px -197px
 //
 //.icon-coderiver
 //	width: 49px
 //	height: 5px
+//	background-image: url('../img/icons.png')
+//	background-position: -1451px -197px
+//
+//.icon-cost
+//	width: 36px
+//	height: 36px
+//	background-image: url('../img/icons.png')
+//	background-position: -1425px -282px
+//
+//.icon-delivery
+//	width: 36px
+//	height: 36px
+//	background-image: url('../img/icons.png')
+//	background-position: -1385px -282px
+//
+//.icon-facebook
+//	width: 52px
+//	height: 52px
+//	background-image: url('../img/icons.png')
+//	background-position: -1375px -323px
+//
+//.icon-instagram
+//	width: 52px
+//	height: 52px
+//	background-image: url('../img/icons.png')
+//	background-position: -1522px -224px
+//
+//.icon-orange_bg
+//	width: 584px
+//	height: 95px
+//	background-image: url('../img/icons.png')
+//	background-position: -863px -125px
+//
+//.icon-orange_bg1
+//	width: 518px
+//	height: 95px
+//	background-image: url('../img/icons.png')
+//	background-position: -863px -224px
+//
+//.icon-orange_bg_mk
+//	width: 418px
+//	height: 95px
+//	background-image: url('../img/icons.png')
+//	background-position: -863px -323px
+//
+//.icon-registr_bg
+//	width: 732px
+//	height: 121px
+//	background-image: url('../img/icons.png')
+//	background-position: -863px 0px
+//
+//.icon-registr_form_fb
+//	width: 26px
+//	height: 26px
+//	background-image: url('../img/icons.png')
+//	background-position: -1569px -282px
+//
+//.icon-registr_form_g
+//	width: 26px
+//	height: 26px
+//	background-image: url('../img/icons.png')
+//	background-position: -1487px -323px
+//
+//.icon-registr_form_mail
+//	width: 26px
+//	height: 26px
+//	background-image: url('../img/icons.png')
+//	background-position: -1539px -282px
+//
+//.icon-return
+//	width: 36px
+//	height: 36px
+//	background-image: url('../img/icons.png')
+//	background-position: -1465px -282px
+//
+//.icon-vk
+//	width: 52px
+//	height: 52px
+//	background-image: url('../img/icons.png')
+//	background-position: -1431px -323px
+//
+//.icon-witch_marker
+//	width: 30px
+//	height: 26px
+//	background-image: url('../img/icons.png')
+//	background-position: -1505px -282px
+//
+//.icon-witch_on_broomstick
+//	width: 859px
+//	height: 849px
 //	background-image: url('../img/icons.png')
 //	background-position: 0px 0px
 //
