@@ -74,4 +74,10 @@ $(document).ready(function() {
 		scrollImg();		
 	});
 
+	$('.js-info-link').click(function() {
+		$('.js-info-visible').addClass('is-active');
+		$('.js-info-hidden').addClass('is-active');
+		return false
+	});
+
 });

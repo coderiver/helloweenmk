@@ -103,7 +103,7 @@ a { text-decoration: none; }
 .form__list a { display: inline-block; vertical-align: top; }
 .form__list a.is-mail { background-image: url("../img/icons.png"); width: 26px; height: 26px; background-position: -1539px -282px; }
 .form__list a.is-fb { background-image: url("../img/icons.png"); width: 26px; height: 26px; background-position: -1569px -282px; }
-.form__list a.is-gp { background-image: url("../img/icons.png"); width: 26px; height: 26px; background-position: -1487px -323px; }
+.form__list a.is-gp { background-image: url("../img/icons.png"); width: 26px; height: 26px; background-position: -1512px -323px; }
 .form__label { color: black; font-size: 20px; font-family: "PFSquereSansPro Medium", Arial, sans-serif; line-height: 1; padding: 35px 10px; float: left; }
 .form__field { padding: 0 145px 0 0; margin: 12px 0 17px; overflow: hidden; position: relative; box-shadow: 0 2px 2px rgba(0, 42, 65, 0.35); border-radius: 5px; }
 .form__field .input { border-radius: 5px 0 0 5px; }
@@ -115,7 +115,7 @@ a { text-decoration: none; }
 .btn:active { background-image: linear-gradient(to top, #0088af 0%, #002a41 69%, #002a41 100%); }
 .btn_mod { border-radius: 2px; padding: 18px 23px; font-size: 24px; }
 
-.info { *zoom: 1; max-width: 775px; margin: 0 auto; padding: 40px 0 0; }
+.info { *zoom: 1; padding: 40px 0 0; position: relative; z-index: 2; }
 .info:after { content: " "; display: table; clear: both; }
 .info__img { float: left; font-size: 0; min-height: 290px; }
 .info__block { float: right; padding: 15px 0 0; }
@@ -127,7 +127,25 @@ a { text-decoration: none; }
 .info__list li i.icon-delivery { background-image: url("../img/icons.png"); width: 36px; height: 36px; background-position: -1385px -282px; }
 .info__list li i.icon-cost { background-image: url("../img/icons.png"); width: 36px; height: 36px; background-position: -1425px -282px; }
 .info__list li i.icon-return { background-image: url("../img/icons.png"); width: 36px; height: 36px; background-position: -1465px -282px; }
-.info__btn { padding: 50px 0 70px; text-align: center; clear: both; }
+.info__btn { padding: 0 0 70px; text-align: center; clear: both; }
+.info__section { *zoom: 1; max-width: 775px; margin: 0 auto 50px; }
+.info__section:after { content: " "; display: table; clear: both; }
+.info__section.is-active { display: none; }
+.info__row { *zoom: 1; max-width: 910px; margin: 0 auto; position: relative; display: none; padding: 50px 0 15px; }
+.info__row:after { content: " "; display: table; clear: both; }
+.info__row.is-active { display: block; }
+.info__col { width: 25%; float: left; text-align: center; color: white; }
+.info__col span { display: block; font-size: 16px; line-height: 1.2; font-family: "OpenSans Semibold", Arial, sans-serif; margin-bottom: 20px; }
+.info__col small { display: block; font-size: 13px; line-height: 1.2; font-family: "PFSquereSansPro Regular", Arial, sans-serif; }
+.info__icon { display: block; margin: 0 auto 23px; position: relative; }
+.info__icon:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -18px 10px 0; background-image: url("../img/icons.png"); width: 21px; height: 36px; background-position: -1487px -323px; }
+.info__icon.is-one { background-image: url("../img/icons.png"); width: 185px; height: 184px; background-position: -1242px -602px; }
+.info__icon.is-one:after { content: ""; position: absolute; bottom: 100%; right: -135px; margin-bottom: -52px; background-image: url("../img/icons.png"); width: 206px; height: 176px; background-position: -863px -422px; }
+.info__icon.is-two { background-image: url("../img/icons.png"); width: 186px; height: 183px; background-position: 0px -853px; }
+.info__icon.is-two:after { content: ""; position: absolute; bottom: 100%; right: -95px; margin-bottom: -47px; background-image: url("../img/icons.png"); width: 143px; height: 144px; background-position: -1073px -422px; z-index: 2; }
+.info__icon.is-three { background-image: url("../img/icons.png"); width: 186px; height: 184px; background-position: -863px -602px; }
+.info__icon.is-four { background-image: url("../img/icons.png"); width: 185px; height: 184px; background-position: -1053px -602px; }
+.info__icon.is-four:before { display: none; }
 
 .link-dotted { font-family: "PFSquereSansPro Medium", Arial, sans-serif; color: #d9711c; font-size: 14px; line-height: 20px; border-bottom: 1px dotted #d9711c; display: inline-block; vertical-align: top; }
 
@@ -139,6 +157,7 @@ a { text-decoration: none; }
 .help__subtitle { color: #ffa200; font-size: 24px; font-family: "PFSquereSansPro Medium", Arial, sans-serif; text-transform: uppercase; line-height: 1.2; margin-bottom: 15px; }
 .help__list li { padding: 11px 0 11px 45px; position: relative; font-size: 18px; line-height: 1.2; text-align: left; }
 .help__list li:before { content: ""; position: absolute; top: 10px; left: 0; background-image: url("../img/icons.png"); width: 30px; height: 26px; background-position: -1505px -282px; }
+.help__list li .icon-question { margin: -5px 5px 0; cursor: pointer; }
 
 .brands { text-align: center; font-size: 0; }
 .brands img { max-width: 100%; }
@@ -151,8 +170,11 @@ a { text-decoration: none; }
 .social li { display: inline-block; padding: 0 6px; }
 .social li a { display: inline-block; vertical-align: top; }
 .social li a.is-vk { background-image: url("../img/icons.png"); width: 52px; height: 52px; background-position: -1431px -323px; }
-.social li a.is-insta { background-image: url("../img/icons.png"); width: 52px; height: 52px; background-position: -1522px -224px; }
-.social li a.is-fb { background-image: url("../img/icons.png"); width: 52px; height: 52px; background-position: -1375px -323px; }
+.social li a.is-insta { background-image: url("../img/icons.png"); width: 52px; height: 52px; background-position: -1375px -323px; }
+.social li a.is-fb { background-image: url("../img/icons.png"); width: 52px; height: 52px; background-position: -1522px -224px; }
+
+.icon-question { display: inline-block; vertical-align: top; background-image: url("../img/icons.png"); width: 23px; height: 23px; background-position: -1451px -197px; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 

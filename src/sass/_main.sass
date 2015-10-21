@@ -192,9 +192,9 @@
 
 .info
 	+clr
-	max-width: 775px
-	margin: 0 auto 
 	padding: 40px 0 0 
+	position: relative
+	z-index: 2
 	&__img
 		float: left
 		font-size: 0
@@ -235,10 +235,77 @@
 				&.icon-return
 					+s(return)
 	&__btn
-		padding: 50px 0 70px
+		padding: 0 0 70px
 		text-align: center 
 		clear: both
-
+	&__section
+		+clr
+		max-width: 775px
+		margin: 0 auto 50px
+		&.is-active
+			display: none
+	&__row
+		+clr
+		max-width: 910px
+		margin: 0 auto  
+		position: relative
+		display: none
+		padding: 50px 0 15px
+		&.is-active
+			display: block
+	&__col
+		width: 25%
+		float: left
+		text-align: center
+		color: white
+		span
+			display: block
+			font-size: 16px
+			line-height: 1.2
+			+opsemi
+			margin-bottom: 20px
+		small
+			display: block
+			font-size: 13px
+			line-height: 1.2
+			+reg
+	&__icon
+		display: block
+		margin: 0 auto 23px
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 50%
+			left: 100%
+			margin: -18px 10px 0
+			+s(arr-right) 
+		&.is-one
+			+s(info-one)
+			&:after
+				content: "" 
+				position: absolute
+				bottom: 100%
+				right: -135px
+				margin-bottom: -52px
+				+s(no)
+		&.is-two
+			+s(info-two)
+			&:after
+				content: "" 
+				position: absolute
+				bottom: 100%
+				right: -95px
+				margin-bottom: -47px
+				+s(yes)
+				z-index: 2
+		&.is-three
+			+s(info-three)
+		&.is-four
+			+s(info-four)
+			&:before
+				display: none
+		
 .link-dotted
 	+med
 	color: #d9711c
@@ -291,6 +358,9 @@
 				top: 10px
 				left: 0
 				+s(witch_marker)
+			.icon-question
+				margin: -5px 5px 0
+				cursor: pointer 
 
 .brands
 	text-align: center
@@ -333,4 +403,7 @@
 				+s(instagram)
 			&.is-fb
 				+s(facebook)
-			
+.icon-question
+	display: inline-block
+	vertical-align: top
+	+s(question)
