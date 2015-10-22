@@ -175,6 +175,10 @@ a { text-decoration: none; }
 
 .icon-question { display: inline-block; vertical-align: top; background-image: url("../img/icons.png"); width: 23px; height: 23px; background-position: -1451px -197px; }
 
+.tooltipster-base { max-width: 600px; }
+
+.tooltipster-default { background: #fff; border: 2px solid #e6e6e6; color: #333; box-shadow: 0 0 3px 0 #333; }
+.tooltipster-default .tooltipster-content { font-family: "PFSquereSansPro Regular", Arial, sans-serif; font-size: 14px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 

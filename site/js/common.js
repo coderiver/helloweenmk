@@ -57,4 +57,10 @@ $(document).ready(function() {
 		return false
 	});
 
+	$('.js-tooltip').tooltipster({
+		contentAsHTML: true,
+		hideOnClick: true,
+		position: 'top-left'
+	});
+
 });
