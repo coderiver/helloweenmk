@@ -115,7 +115,7 @@ a { text-decoration: none; }
 .btn:active { background-image: linear-gradient(to top, #0088af 0%, #002a41 69%, #002a41 100%); }
 .btn_mod { border-radius: 2px; padding: 18px 23px; font-size: 24px; }
 
-.info { *zoom: 1; padding: 40px 0 0; position: relative; z-index: 2; }
+.info { *zoom: 1; position: relative; z-index: 2; }
 .info:after { content: " "; display: table; clear: both; }
 .info__img { float: left; font-size: 0; min-height: 290px; }
 .info__block { float: right; padding: 15px 0 0; }
@@ -131,9 +131,11 @@ a { text-decoration: none; }
 .info__section { *zoom: 1; max-width: 775px; margin: 0 auto 50px; }
 .info__section:after { content: " "; display: table; clear: both; }
 .info__section.is-active { display: none; }
-.info__row { *zoom: 1; max-width: 910px; margin: 0 auto; position: relative; display: none; padding: 50px 0 15px; }
+.info__section h4 { margin-bottom: 40px; }
+.info__row { *zoom: 1; max-width: 910px; margin: 0 auto; position: relative; display: none; padding: 0 0 15px; }
 .info__row:after { content: " "; display: table; clear: both; }
 .info__row.is-active { display: block; }
+.info__row h4 { margin-bottom: 90px; }
 .info__col { width: 25%; float: left; text-align: center; color: white; }
 .info__col span { display: block; font-size: 16px; line-height: 1.2; font-family: "OpenSans Semibold", Arial, sans-serif; margin-bottom: 20px; }
 .info__col small { display: block; font-size: 13px; line-height: 1.2; font-family: "PFSquereSansPro Regular", Arial, sans-serif; }
